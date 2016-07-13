@@ -1,4 +1,4 @@
-package com.courses.spalah;
+﻿package com.courses.spalah;
 
 /**
  * Модифицируйте этот класс(файл)
@@ -30,6 +30,7 @@ public class HomeWorkLoops {
      */
     public static double max(double[] doubles) {
         return 1;
+// test string
     }
 
     /**
