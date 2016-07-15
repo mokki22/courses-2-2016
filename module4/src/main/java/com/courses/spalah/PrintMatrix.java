@@ -88,6 +88,20 @@ public class PrintMatrix {
             System.out.println();
             count++;
     }
+        System.out.println();
+
+        // треугольник 4
+        int count1 = k;
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j < k - count1; j++) {
+                System.out.print("\t");
+            }
+            for (int j = 0; j < count1; j++) {
+                System.out.print(s+"\t");
+            }
+            System.out.println();
+            count1--;
+        }
 
 }
 }
