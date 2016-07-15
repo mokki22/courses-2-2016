@@ -1,5 +1,9 @@
 package com.courses.spalah;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * @author Ievgen Tararaka
  */
@@ -19,6 +23,34 @@ public class ConsecutiveNumbers {
      *
      * @param args - аргументы коммандной строки
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("String with numbers ");
+        String numbers = bufferRead.readLine();
+
+        System.out.println("Separate symbol ");
+        String symbol = bufferRead.readLine();
+
+        if ("*".equals(symbol)) {
+            symbol = "\\*";
+        }
+        if (" ".equals(symbol)) {
+            symbol = " ";
+        }
+        String[] finalNumbers = numbers.split(symbol);
+
+        boolean result = false;
+        for (int i = finalNumbers.length - 1; i > 0; i--) {
+            if (Integer.parseInt(finalNumbers[i]) - Integer.parseInt(finalNumbers[i - 1]) == 1) {
+                result = true;
+            } else {
+                result = false;
+                break;
+            }
+        }
+        System.out.println(result);
+
     }
-}
+    }
+
